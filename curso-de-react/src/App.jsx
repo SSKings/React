@@ -32,6 +32,25 @@ function App() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
+  //função useEffect com array vazio, executará apenas 1 vez ao acessar o component
+  useEffect(() => {
+    //função para usar a API do placeholder para conseguir tasks.
+    const fetchTasks = async () => {
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/todos?_limit=5",
+        {
+          method: "GET",
+        }
+      );
+
+      const data = await response.json();
+
+      setTasks(data);
+    };
+
+    //fetchTasks();
+  }, []);
+
   function onTaskClick(taskId) {
     const newTasks = tasks.map((task) => {
       if (task.id === taskId) {
