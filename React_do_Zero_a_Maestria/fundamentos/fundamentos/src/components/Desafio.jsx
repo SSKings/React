@@ -1,4 +1,4 @@
-const Challenge = () => {
+const Desafio = () => {
   const num1 = 10;
   const num2 = 50;
 
@@ -20,4 +20,4 @@ const Challenge = () => {
   );
 };
 
-export default Challenge;
+export default Desafio;
