@@ -1,5 +1,6 @@
 import "./App.css";
 import GokuEGohan from "./assets/goku_gohan.jpg";
+import ManageData from "./components/ManageData";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <h3>Imagem da pasta assets</h3>
         <img src={GokuEGohan} alt="Goku_e_Gohan" />
       </div>
+      <ManageData />
     </div>
   );
 };
