@@ -1,10 +1,11 @@
 //Styles / css
 import "./App.css";
-import ComponenteQualquer from "./components/ComponenteQualquer";
 
 //components
 import PrimeiroComponente from "./components/PrimeiroComponente";
 import TemplateExpressions from "./components/TemplateExpressions";
+import ComponenteQualquer from "./components/ComponenteQualquer";
+import Events from "./components/Events";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <PrimeiroComponente />
       <TemplateExpressions />
       <ComponenteQualquer />
+      <Events />
     </div>
   );
 }
