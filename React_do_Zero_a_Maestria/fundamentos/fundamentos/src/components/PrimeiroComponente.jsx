@@ -1,7 +1,12 @@
+import ComponenteQualquer from "./ComponenteQualquer";
+
 const PrimeiroComponente = () => {
+  //Comentário na parte da função
   return (
     <div>
-      <h1>Primeiro Componente</h1>
+      {/*Comentário no jsx*/}
+      <h1 className="className">Primeiro Componente</h1>
+      <ComponenteQualquer />
     </div>
   );
 };
