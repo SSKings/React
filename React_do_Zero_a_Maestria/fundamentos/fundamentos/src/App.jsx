@@ -6,6 +6,7 @@ import PrimeiroComponente from "./components/PrimeiroComponente";
 import TemplateExpressions from "./components/TemplateExpressions";
 import ComponenteQualquer from "./components/ComponenteQualquer";
 import Events from "./components/Events";
+import Desafio from "./components/Desafio";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <TemplateExpressions />
       <ComponenteQualquer />
       <Events />
+      <Desafio />
     </div>
   );
 }
