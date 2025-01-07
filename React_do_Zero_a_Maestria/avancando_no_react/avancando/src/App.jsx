@@ -1,5 +1,10 @@
+//styles / css
 import "./App.css";
+//images
 import GokuEGohan from "./assets/goku_gohan.jpg";
+//components
+import ConditionalRender from "./components/ConditionalRender";
+import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
 
 const App = () => {
@@ -17,6 +22,8 @@ const App = () => {
         <img src={GokuEGohan} alt="Goku_e_Gohan" />
       </div>
       <ManageData />
+      <ListRender />
+      <ConditionalRender />
     </div>
   );
 };
