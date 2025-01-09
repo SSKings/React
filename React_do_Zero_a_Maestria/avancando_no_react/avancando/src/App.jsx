@@ -13,9 +13,18 @@ import CarDetails from "./components/CarDetails";
 import Fragment from "./components/Fragment";
 import Container from "./components/Container";
 import ExecuteFunction from "./components/ExecuteFunction";
+import Message from "./components/Message";
+import ChangeMessageState from "./components/ChangeMessageState";
+import UserDetails from "./components/UserDetails";
 
 const App = () => {
   const [name] = useState("SSkings");
+
+  const pessoas = [
+    { id: 1, nome: "Sérgio", idade: 31, profissao: "Desenvolvedor Full-Stack" },
+    { id: 2, nome: "Vera", idade: 36, profissao: "Nail Designer" },
+    { id: 3, nome: "Neto", idade: 1.9, profissao: "Come e dorme" },
+  ];
 
   const cars = [
     { id: 1, marca: "Lamborghini", km: 0, cor: "Preto", novo: true },
@@ -25,6 +34,12 @@ const App = () => {
 
   const showMessage = () => {
     console.log("Evento do componente pai!");
+  };
+
+  const [message, setMessage] = useState();
+
+  const handleMessage = (msg) => {
+    setMessage(msg);
   };
 
   return (
@@ -64,6 +79,18 @@ const App = () => {
         <p>Este é o conteudo children</p>
       </Container>
       <ExecuteFunction myFunction={showMessage} />
+      {/* state lift */}
+      <Message msg={message} />
+      <ChangeMessageState handleMessage={handleMessage} />
+      {/* desafio 4*/}
+      {pessoas.map((pessoa) => (
+        <UserDetails
+          key={pessoa.id}
+          nome={pessoa.nome}
+          idade={pessoa.idade}
+          profissao={pessoa.profissao}
+        />
+      ))}
     </div>
   );
 };
