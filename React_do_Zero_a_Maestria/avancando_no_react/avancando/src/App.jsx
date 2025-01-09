@@ -12,15 +12,20 @@ import ShowNameWithProps from "./components/ShowNameWithProps";
 import CarDetails from "./components/CarDetails";
 import Fragment from "./components/Fragment";
 import Container from "./components/Container";
+import ExecuteFunction from "./components/ExecuteFunction";
 
 const App = () => {
   const [name] = useState("SSkings");
 
   const cars = [
     { id: 1, marca: "Lamborghini", km: 0, cor: "Preto", novo: true },
-    { id: 1, marca: "BMW", km: 10000, cor: "Branco", novo: false },
-    { id: 1, marca: "Ferrari", km: 0, cor: "Vermelho", novo: true },
+    { id: 2, marca: "BMW", km: 10000, cor: "Branco", novo: false },
+    { id: 3, marca: "Ferrari", km: 0, cor: "Vermelho", novo: true },
   ];
+
+  const showMessage = () => {
+    console.log("Evento do componente pai!");
+  };
 
   return (
     <div>
@@ -58,6 +63,7 @@ const App = () => {
       <Container value="VALUE">
         <p>Este é o conteudo children</p>
       </Container>
+      <ExecuteFunction myFunction={showMessage} />
     </div>
   );
 };
