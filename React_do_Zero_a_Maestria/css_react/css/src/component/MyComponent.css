@@ -1,0 +1,10 @@
+/* Aqui */
+p {
+  color: black;
+  background-color: aquamarine;
+}
+
+.my-component-p {
+  color: white;
+  background-color: blueviolet;
+}
