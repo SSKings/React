@@ -1,9 +1,5 @@
 //CSS
 import "./StartScreen.css";
-//REACT
-import { useCallBack, useEffect, useState } from "react";
-//data
-import { wordslist } from "../data/words";
 
 const StarScreen = () => {
   return (
