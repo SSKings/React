@@ -3,7 +3,7 @@ import "./App.css";
 //react
 import { useCallBack, useEffect, useState } from "react";
 //data
-import { wordslist } from "../data/words";
+import { wordslist } from "./data/words";
 //components
 import StarScreen from "./components/StarScreen";
 import Game from "./components/Game";
@@ -19,11 +19,25 @@ const App = () => {
   const [gameStage, setGameStage] = useState(stages[0].name);
   const [words] = useState(wordslist);
 
+  //começar o jogo
+  const startGame = () => {
+    setGameStage(stages[1].name);
+  };
+
+  // processa letras
+  const verifyLetter = () => {
+    setGameStage(stages[2].name);
+  };
+  // restarts the game
+  const retry = () => {
+    setGameStage(stages[0].name);
+  };
+
   return (
     <div className="App">
-      {gameStage === "start" && <StarScreen />}
-      {gameStage === "game" && <Game />}
-      {gameStage === "end" && <GameOver />}
+      {gameStage === "start" && <StarScreen startGame={startGame} />}
+      {gameStage === "game" && <Game verifyLetter={verifyLetter} />}
+      {gameStage === "end" && <GameOver retry={retry} />}
     </div>
   );
 };
