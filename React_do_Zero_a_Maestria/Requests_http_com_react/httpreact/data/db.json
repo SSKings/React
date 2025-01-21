@@ -34,6 +34,26 @@
       "id": "0b2c",
       "name": "Cadeira",
       "price": "100"
+    },
+    {
+      "id": "1133",
+      "name": "qwe",
+      "price": "22"
+    },
+    {
+      "id": "be72",
+      "name": "blusa",
+      "price": "123"
+    },
+    {
+      "id": "a8bd",
+      "name": "blusão moletom",
+      "price": "200.00"
+    },
+    {
+      "id": "76d4",
+      "name": "blusão moletom",
+      "price": "200.00"
     }
   ]
 }
