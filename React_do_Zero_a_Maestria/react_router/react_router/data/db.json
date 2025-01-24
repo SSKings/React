@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Camisa de Rock",
+      "price": 79.99
+    },
+    {
+      "id": 2,
+      "name": "Camisa de Anime",
+      "price": 69.99
+    },
+    {
+      "id": 3,
+      "name": "Camisa de Séries",
+      "price": 59.99
+    }
+  ]
+}
