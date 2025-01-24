@@ -1,21 +1,6 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "Camiseta",
-      "price": 60.89
-    },
-    {
-      "id": "2",
-      "name": "Calça Jeans",
-      "price": 80
-    },
-    {
-      "id": "3",
-      "name": "Boné",
-      "price": 29.99
-    },
-    {
       "id": "3d73",
       "name": "Calça p/ jovem de 16 anos",
       "price": "300.50"
@@ -26,29 +11,9 @@
       "price": "50.59"
     },
     {
-      "id": "0b2c",
-      "name": "Cadeira",
-      "price": "100"
-    },
-    {
       "id": "a8bd",
       "name": "blusão moletom",
       "price": "200.00"
-    },
-    {
-      "id": "dccf",
-      "name": "Camisa de Anime",
-      "price": "50.00"
-    },
-    {
-      "id": "6c91",
-      "name": "Blusão do Naruto",
-      "price": "150.00"
-    },
-    {
-      "id": "e933",
-      "name": "fone de ouvido",
-      "price": "20.00"
     }
   ]
 }
