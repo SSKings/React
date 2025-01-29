@@ -12,6 +12,7 @@ const Search = () => {
     <div>
       <h1>Resultados disponíveis</h1>
       {error && <p>Erro inesperado.</p>}
+      {loading && <p>Carregando...</p>}
       <ul className="products">
         {items &&
           items.map((item) => (
