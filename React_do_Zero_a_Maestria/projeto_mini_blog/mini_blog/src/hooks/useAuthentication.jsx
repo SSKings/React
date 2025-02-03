@@ -9,6 +9,7 @@ import {
 } from "firebase/auth";
 
 import { useState, useEffect } from "react";
+import { data } from "react-router-dom";
 
 export const useAuthentication = () => {
   const [error, setError] = useState(null);
@@ -57,10 +58,45 @@ export const useAuthentication = () => {
       } else if (error.message.includes("email-already")) {
         systemErroMessage = "Email already registered";
       } else {
-        systemErroMessage = "Ocorreu um erro, tente mais tarde.";
+        systemErroMessage = "Unexpected error";
       }
       setLoading(false);
       setError(systemErroMessage);
+    }
+  };
+
+  // Logout - sign out
+  const logout = () => {
+    checkIfIsCanceled();
+    signOut(auth);
+  };
+
+  //login - sign in
+  const login = async (data) => {
+    checkIfIsCanceled();
+    setLoading(true);
+    setError("");
+
+    try {
+      await signInWithEmailAndPassword(auth, data.email, data.password);
+
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+      console.log(error.message);
+      console.log(typeof error.message);
+      console.log(error.message.includes("user-not"));
+
+      let systemErroMessage;
+
+      if (error.message.includes("invalid-credential")) {
+        systemErroMessage = "Incorrect email or password";
+      } else {
+        systemErroMessage = "Unexpected error";
+      }
+
+      setError(systemErroMessage);
+      setLoading(false);
     }
   };
 
@@ -73,5 +109,7 @@ export const useAuthentication = () => {
     createUser,
     error,
     loading,
+    logout,
+    login,
   };
 };
