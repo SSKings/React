@@ -1,5 +1,3 @@
-import { db } from "../firebase/config";
-
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -9,7 +7,6 @@ import {
 } from "firebase/auth";
 
 import { useState, useEffect } from "react";
-import { data } from "react-router-dom";
 
 export const useAuthentication = () => {
   const [error, setError] = useState(null);

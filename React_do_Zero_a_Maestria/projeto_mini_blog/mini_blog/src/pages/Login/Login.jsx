@@ -30,7 +30,7 @@ const Login = () => {
 
   return (
     <div className={styles.login}>
-      <h1>Enter</h1>
+      <h2>Enter</h2>
       <p>Log in to use the system</p>
       <form onSubmit={handleSubmit}>
         <label>
