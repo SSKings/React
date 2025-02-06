@@ -99,7 +99,7 @@ const Register = () => {
         {!authLoading && <button className="btn">Cadastrar</button>}
         {authLoading && (
           <button className="btn" disabled>
-            Aguarde
+            Wait...
           </button>
         )}
         {error && <p className="error">{error}</p>}

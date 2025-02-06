@@ -58,7 +58,7 @@ const Login = () => {
         {!loading && <button className="btn">Enter</button>}
         {loading && (
           <button className="btn" disabled>
-            Aguarde...
+            Wait...
           </button>
         )}
         {error && <p className="error">{error}</p>}
