@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import api from "../../services/api";
+import ReactMarkdown from "react-markdown";
 
 const RecipeGenerator = () => {
   const [ingredients, setIngredients] = useState("");
@@ -44,7 +45,7 @@ const RecipeGenerator = () => {
 
       <button onClick={createRecipe}>Create Recipe</button>
       <div className="output">
-        <p>{recipe}</p>
+        <ReactMarkdown>{recipe}</ReactMarkdown>
       </div>
     </div>
   );
